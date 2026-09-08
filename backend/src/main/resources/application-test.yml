@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:smartbudgettest;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+
+  flyway:
+    enabled: true
+
+app:
+  jwt:
+    secret: 9a8f7e6d5c4b3a210987654321fedcba0987654321fedcba0987654321fedcba
